@@ -11,23 +11,23 @@ createServer({
   seeds(server) {
     server.db.loadData({
       transactions: [
-        {
-          id: 1,
-          title: 'Aluguel',
-          amount: '4000',
-          type: 'withdraw',
-          category: 'Casa',
-          createdAt: new Date('2021-01-02'),
-        },
+        // {
+        //   id: 1,
+        //   title: 'Aluguel',
+        //   amount: 500,
+        //   type: 'withdraw',
+        //   category: 'Casa',
+        //   createdAt: new Date('2021-01-02'),
+        // },
 
-        {
-          id: 2,
-          title: 'Frelance de Website ',
-          amount: '60000',
-          type: 'deposit',
-          category: 'Dev',
-          createdAt: new Date('2021-01-07'),
-        }
+        // {
+        //   id: 2,
+        //   title: 'Frelance de Website ',
+        //   amount: 1000,
+        //   type: 'deposit',
+        //   category: 'Dev',
+        //   createdAt: new Date('2021-01-07'),
+        // }
       ],
     })
   },
@@ -36,7 +36,7 @@ createServer({
     this.namespace = 'api';
 
     this.get('/transactions', () => {
-      return this.schema.all('trasanction');
+      return this.schema.all('transaction');
     })
 
     this.post('/transactions', (schema, request) => {
